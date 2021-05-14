@@ -18,4 +18,9 @@ public class Client {
     private String email;
     private String phoneNumber;
     private Date createdAt;
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 }
+

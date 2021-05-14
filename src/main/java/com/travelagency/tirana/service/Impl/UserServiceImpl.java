@@ -1,4 +1,4 @@
-package com.travelagency.tirana.service.Impl;//package com.internet.base.com.internet.base.application.service.Impl;
+package com.travelagency.tirana.service.Impl;
 //
 //import com.internet.base.com.internet.base.application.model.Client;
 //import com.internet.base.com.internet.base.application.repository.ClientRepository;

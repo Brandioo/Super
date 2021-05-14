@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import java.util.Date;
 
 @Data
 public class SaveTourRequest {
@@ -15,12 +16,13 @@ public class SaveTourRequest {
     private int maxPeople;
     private int minPeople;
     private String description;
-    private String departure;
+    private Date departure;
     private String photo;
     private boolean featured;
     @Enumerated(EnumType.STRING)
     private TravelType travelType;
     private int price;
     private int quantity;
+    private int destinationId;
 
 }

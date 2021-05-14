@@ -1,7 +1,9 @@
 package com.travelagency.tirana.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -16,6 +18,5 @@ public class Destination {
     private long id;
     private String name;
     private Date createdAt;
-
 }
 

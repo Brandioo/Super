@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
@@ -21,7 +23,7 @@ public class Tour {
     private int maxPeople;
     private int minPeople;
     private String description;
-    private String departure;
+    private Date departure;
     private String photo;
     private boolean featured;
     @Enumerated(EnumType.STRING)
@@ -29,7 +31,6 @@ public class Tour {
     private int price;
     private int quantity;
     private Date createdAt;
-
 
     @ManyToOne
     @ToString.Exclude

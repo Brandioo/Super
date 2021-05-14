@@ -32,7 +32,7 @@ public class TourServiceImpl implements TourService {
             dbTour.get().setTravelType(request.getTravelType());
             dbTour.get().setPrice(request.getPrice());
             dbTour.get().setQuantity(request.getQuantity());
-
+            dbTour.get().setDestinationId(request.getDestinationId());
             tourRepository.save(dbTour.get());
             return dbTour.get().getId();
         }
@@ -49,6 +49,7 @@ public class TourServiceImpl implements TourService {
         newTour.setPrice(request.getPrice());
         newTour.setQuantity(request.getQuantity());
         newTour.setCreatedAt(new Date());
+        newTour.setDestinationId(request.getDestinationId());
         tourRepository.save(newTour);
         return newTour.getId();
     }

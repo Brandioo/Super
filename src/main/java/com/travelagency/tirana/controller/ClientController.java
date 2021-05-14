@@ -2,6 +2,8 @@ package com.travelagency.tirana.controller;
 
 import com.travelagency.tirana.model.Client;
 import com.travelagency.tirana.service.ClientService;
+import com.travelagency.tirana.service.Impl.ClientImpl.SaveClientRequest;
+import com.travelagency.tirana.service.Impl.DestinationImpl.SaveDestinationRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/api/clients")
 public class ClientController {
+
     private ClientService clientService;
 
     public ClientController(ClientService clientService) {
@@ -19,6 +22,11 @@ public class ClientController {
     @GetMapping
     public List<Client> getAll() {
         return clientService.getAll();
+    }
+
+    @PostMapping
+    public long save(@RequestBody SaveClientRequest request) {
+        return clientService.save(request);
     }
 
     @GetMapping("/{id}")
