@@ -1,4 +1,4 @@
-package com.travelagency.tirana.service;
+package com.travelagency.tirana.service.Impl.TourImpl;
 
 import com.travelagency.tirana.model.Tour;
 import com.travelagency.tirana.service.Impl.TourImpl.SaveTourRequest;

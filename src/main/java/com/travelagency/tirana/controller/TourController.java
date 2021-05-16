@@ -3,7 +3,7 @@ package com.travelagency.tirana.controller;
 
 import com.travelagency.tirana.model.Tour;
 import com.travelagency.tirana.service.Impl.TourImpl.SaveTourRequest;
-import com.travelagency.tirana.service.TourService;
+import com.travelagency.tirana.service.Impl.TourImpl.TourService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

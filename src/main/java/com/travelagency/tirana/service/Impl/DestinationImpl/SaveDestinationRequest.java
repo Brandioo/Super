@@ -6,4 +6,5 @@ import lombok.Data;
 public class SaveDestinationRequest {
     private long id;
     private String name;
+    private String photo;
 }

@@ -1,9 +1,8 @@
 package com.travelagency.tirana.controller;
 
 import com.travelagency.tirana.model.Client;
-import com.travelagency.tirana.service.ClientService;
+import com.travelagency.tirana.service.Impl.ClientImpl.ClientService;
 import com.travelagency.tirana.service.Impl.ClientImpl.SaveClientRequest;
-import com.travelagency.tirana.service.Impl.DestinationImpl.SaveDestinationRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

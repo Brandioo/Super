@@ -2,7 +2,6 @@ package com.travelagency.tirana.service.Impl.DestinationImpl;
 
 import com.travelagency.tirana.model.Destination;
 import com.travelagency.tirana.repository.DestinationRepository;
-import com.travelagency.tirana.service.DestinationService;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -23,12 +22,14 @@ public class DestinationServiceImpl implements DestinationService {
         var dbDestination = destinationRepository.findById(request.getId());
         if(dbDestination.isPresent()) {
             dbDestination.get().setName(request.getName());
+            dbDestination.get().setPhoto(request.getPhoto());
             destinationRepository.save(dbDestination.get());
             return dbDestination.get().getId();
         }
 
         var newDestination = new Destination();
         newDestination.setName(request.getName());
+        newDestination.setPhoto(request.getPhoto());
         newDestination.setCreatedAt(new Date());
         destinationRepository.save(newDestination);
         return newDestination.getId();

@@ -1,4 +1,4 @@
-package com.travelagency.tirana.service;
+package com.travelagency.tirana.service.Impl.DestinationImpl;
 
 import com.travelagency.tirana.model.Destination;
 import com.travelagency.tirana.service.Impl.DestinationImpl.SaveDestinationRequest;

@@ -2,7 +2,6 @@ package com.travelagency.tirana.service.Impl.ClientImpl;
 
 import com.travelagency.tirana.model.Client;
 import com.travelagency.tirana.repository.ClientRepository;
-import com.travelagency.tirana.service.ClientService;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

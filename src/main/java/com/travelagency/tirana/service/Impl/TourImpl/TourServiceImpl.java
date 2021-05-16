@@ -2,7 +2,6 @@ package com.travelagency.tirana.service.Impl.TourImpl;
 
 import com.travelagency.tirana.model.Tour;
 import com.travelagency.tirana.repository.TourRepository;
-import com.travelagency.tirana.service.TourService;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

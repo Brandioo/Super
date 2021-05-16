@@ -1,4 +1,4 @@
-package com.travelagency.tirana.service;
+package com.travelagency.tirana.service.Impl.ReservationImpl;
 
 import com.travelagency.tirana.model.Reservation;
 import com.travelagency.tirana.service.Impl.ReservationImpl.SaveReservationRequest;
