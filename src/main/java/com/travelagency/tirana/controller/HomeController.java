@@ -1,7 +1,9 @@
 package com.travelagency.tirana.controller;
 
 import com.travelagency.tirana.service.Impl.BannerImpl.BannerService;
+import com.travelagency.tirana.service.Impl.BlogImpl.BlogService;
 import com.travelagency.tirana.service.Impl.DestinationImpl.DestinationService;
+import com.travelagency.tirana.service.Impl.InstagramImpl.InstagramService;
 import com.travelagency.tirana.service.Impl.TourImpl.TourService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -14,11 +16,16 @@ public class HomeController {
     private TourService tourService;
     private DestinationService destinationService;
     private BannerService bannerService;
+    private BlogService blogService;
+    private InstagramService instagramService;
 
-    public HomeController(TourService tourService, DestinationService destinationService, BannerService bannerService) {
+    public HomeController(InstagramService instagramService, TourService tourService, DestinationService destinationService,
+                          BannerService bannerService, BlogService blogService) {
         this.tourService = tourService;
         this.destinationService = destinationService;
         this.bannerService = bannerService;
+        this.blogService = blogService;
+        this.instagramService = instagramService;
     }
 
     @GetMapping("/")
@@ -36,6 +43,12 @@ public class HomeController {
 
         var banners = this.bannerService.getAll();
         modelMap.addAttribute("banners", banners);
+
+        var blogs = this.blogService.getAll();
+        modelMap.addAttribute("blogs", blogs);
+
+        var instagrams = this.instagramService.getAll();
+        modelMap.addAttribute("instagrams", instagrams);
 
 
         return "index";
