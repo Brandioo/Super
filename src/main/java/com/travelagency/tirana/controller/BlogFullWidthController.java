@@ -1,5 +1,6 @@
 package com.travelagency.tirana.controller;
 
+import com.travelagency.tirana.service.Impl.BlogImpl.BlogService;
 import com.travelagency.tirana.service.Impl.InstagramImpl.InstagramService;
 import com.travelagency.tirana.service.Impl.ReservationImpl.ReservationService;
 import com.travelagency.tirana.service.Impl.TourImpl.TourService;
@@ -11,20 +12,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-public class ContactsController {
+public class BlogFullWidthController {
 
-    private InstagramService instagramService;
+    InstagramService instagramService;
+    BlogService blogService;
 
-    public ContactsController(InstagramService instagramService) {
+    public BlogFullWidthController(InstagramService instagramService, BlogService blogService) {
         this.instagramService = instagramService;
+        this.blogService = blogService;
     }
 
-    @GetMapping("/contacts.html")
+    @GetMapping("/blog-full-width.html")
     public String showHello(final ModelMap modelMap) {
 
         var instagrams = this.instagramService.getAll();
         modelMap.addAttribute("instagrams", instagrams);
 
-        return "contacts";
+        var blogs = this.blogService.getAll();
+        modelMap.addAttribute("blogs", blogs);
+
+        return "blog-full-width";
     }
 }

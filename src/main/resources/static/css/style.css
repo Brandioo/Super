@@ -101,6 +101,12 @@ General styles
 12.2. Media queries
 -------------------------------------------------------------------*/
 
+.topnav {
+  overflow: hidden;
+  align: center;
+  background-color: #00d9c6;
+}
+
 *:hover {
   cursor: default;
 }
@@ -265,6 +271,7 @@ textarea:focus {
 textarea:hover {
   cursor: text;
 }
+
 input {
   border-radius: 0;
 }

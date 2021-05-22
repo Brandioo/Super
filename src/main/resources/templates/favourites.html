@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -47,28 +47,19 @@
                                             <a href="#" class="active"><span>Travel list</span></a>
                                             <ul class="dropdown_ul">
                                                 <li><a href="travel-list-full-width.html">Travel list Full With</a></li>
-                                                <li><a href="travel-list-right-sidebar.html">Travel list Right Sidebar</a></li>
-                                                <li><a href="travel-list-left-sidebar.html">Travel list Left Sidebar</a></li>
-                                                <li><a href="travel-list-image-header.html">Travel list Full With Image Header</a></li>
+                                                <li><a href="travel-list-right-sidebar.html">Travel list Right Sidebar</a>
+                                                </li>
                                                 <li><a href="search-results.html">Search Result</a></li>
                                                 <li><a href="search-results-not-found.html">Search Nothing Found</a></li>
-                                                <li><a href="tour-page-right-sidebar.html">Tour page Right Sidebar</a></li>
-                                                <li><a href="tour-page-left-sidebar.html">Tour page Left Sidebar</a></li>
-                                                <li><a href="tour-page-right-sidebar-width-reply.html">Tour page with reply form</a></li>
+                                                <li><a href="tour-page-right-sidebar-width-reply.html">Tour page with reply
+                                                    form</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown_li">
                                             <a href="#"><span>Page</span></a>
                                             <ul class="dropdown_ul">
-                                                <li><a href="stories-full-width.html">Stories Full With</a></li>
-                                                <li><a href="story.html">Stories Single</a></li>
-                                                <li><a href="stories-right-sidebar.html">Stories Right Sidebar</a></li>
-                                                <li><a href="stories-left-sidebar.html">Stories Left Sidebar</a></li>
                                                 <li><a href="gallery.html">Gallery</a></li>
-                                                <li><a href="gallery-single.html">Gallery Single</a></li>
                                                 <li><a href="404.html">404 page</a></li>
-                                                <li><a href="static-page-right-sidebar.html">Static Page Right Sidebar</a></li>
-                                                <li><a href="static-page-left-sidebar.html">Static Page Left Sidebar</a></li>
                                                 <li><a href="about-us.html">About Us</a></li>
                                             </ul>
                                         </li>
@@ -76,12 +67,9 @@
                                             <a href="#"><span>Blog</span></a>
                                             <ul class="dropdown_ul">
                                                 <li><a href="blog-full-width.html">Blog Full With</a></li>
-                                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
                                                 <li><a href="blog-search-results.html">Search Result</a></li>
-                                                <li><a href="blog-search-results-not-found.html">Search Nothing Found</a></li>
-                                                <li><a href="blog-single-right-sidebar.html">Blog Single Right Sidebar</a></li>
-                                                <li><a href="blog-single-left-sidebar.html">Blog Single Left Sidebar</a></li>
+                                                <li><a href="blog-search-results-not-found.html">Search Nothing Found</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li><a href="contacts.html"><span>Contacts</span></a></li>
@@ -98,15 +86,18 @@
                                             </p>
                                         </div>
                                         <div class="tel">
-                                            <a href="tel:+00344113457">+ 00 344 113 457 77</a>
+                                            <a href="tel:+355695345892">+355 69 53 45 892</a>
                                             <p>Round the clock support</p>
                                         </div>
                                         <div class="social">
-                                            <a href="#" class="link facebook"><span></span></a>
-                                            <a href="#" class="link instagram"><span></span></a>
-                                            <a href="#" class="link pinterest"><span></span></a>
-                                            <a href="#" class="link twitter"><span></span></a>
-                                            <a href="#" class="link youtube"><span></span></a>
+                                            <a href="https://www.facebook.com/Gonline-Pro-106121668187962"
+                                               class="link facebook"><span></span></a>
+                                            <a href="https://www.instagram.com/gonline.al/"
+                                               class="link instagram"><span></span></a>
+                                            <a href="https://www.pinterest.com/" class="link pinterest"><span></span></a>
+                                            <a href="https://twitter.com/?lang=en" class="link twitter"><span></span></a>
+                                            <a href="https://studio.youtube.com/channel/UCWVHt0A_Io4PPRL38cYQzzA/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"
+                                               class="link youtube"><span></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -117,22 +108,34 @@
                                 </div>
                             </div>
                             <div class="right">
-                                <div class="tel"><a href="tel:+19092020119"><span>+ 1909 202 0119</span></a></div>
-                                <a class="favorites-count" title="Favourites" href="favourites.html">
-                                    <div class="_counter">14</div>
-                                    <div class="_text">Favourites</div>
+                                <div class="tel">
+                                    <a href="tel:+3550695345892"><span>+355 069 53 45 892</span></a>
+                                </div>
+                                <a class="favorites-count" href="favourites.html" title="Favourites">
+                                    <div class="_counter">
+                                        14
+                                    </div>
+                                    <div class="_text">
+                                        Favourites
+                                    </div>
                                 </a>
                             </div>
                             <div class="user" id="userblock">
-                                <div class="userlink" id="userlink">
-                                    <img src="img/demo-bg.jpg" alt="">
-                                </div>
+                                <div class="userlink" id="userlink"></div>
                                 <div class="usermenu" id="usermenu">
                                     <ul>
-                                        <li><a href="#" class="js-popup-open" data-href="#login">Login</a></li>
-                                        <li><a href="#" class="js-popup-open" data-href="#registration">Registration</a></li>
-                                        <li><a href="#" class="js-popup-open" data-href="#recovery-pass">Forgot password?</a></li>
-                                        <li><a href="#" class="js-popup-open" data-href="#profile-setting">Setting</a></li>
+                                        <li>
+                                            <a class="js-popup-open" data-href="#login" href="#">Login</a>
+                                        </li>
+                                        <li>
+                                            <a class="js-popup-open" data-href="#registration" href="#">Registration</a>
+                                        </li>
+                                        <li>
+                                            <a class="js-popup-open" data-href="#recovery-pass" href="#">Forgot password?</a>
+                                        </li>
+                                        <li>
+                                            <a class="js-popup-open" data-href="#profile-setting" href="#">Setting</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -210,11 +213,11 @@
             <div class="page_body">
                 <div class="wrap">
                     <div class="wrap_float">
-                        <div class="posts">
-                            <a href="tour-page-right-sidebar.html" class="tour_item" style="background-image: url(img/demo-bg.jpg)">
+                        <div class="posts" th:each="elem : ${tours}">
+                            <a href="tour-page-right-sidebar.html" class="tour_item" th:style="'background-image:url(/api/files/' + ${elem.photo} + ');'">
                                 <div class="tour_item_top">
                                     <p class="country">
-                                        <span>North Africa</span>
+                                        <span th:text="${elem.title}"></span>
                                     </p>
                                     <div class="add_bookmark fav-button added">
                                         <i class="is-added bouncy"></i>
@@ -243,238 +246,6 @@
                                 </div>
                                 <div class="shadow js-shadow"></div>
                             </a>
-
-                            <a href="tour-page-right-sidebar.html" class="tour_item" style="background-image: url(img/demo-bg.jpg)">
-                                <div class="tour_item_top">
-                                    <p class="country">
-                                        <span>United States of America</span>
-                                    </p>
-                                    <div class="add_bookmark fav-button added">
-                                        <i class="is-added bouncy"></i>
-                                        <i class="not-added bouncy"></i>
-                                        <span class="fav-overlay"></span>
-                                    </div>
-                                </div>
-                                <div class="tour_item_bottom">
-                                    <h3 class="_title">Antelope canyon in Arizona USA exclusive tour</h3>
-                                    <div class="_info">
-                                        <div class="_info_left">
-                                            <div class="days">5 days |</div>
-                                            <div class="cost">from $356</div>
-                                        </div>
-                                        <div class="_info_right">
-                                            <div class="rating-stars">
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star"></div>
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="rating-text">5 reviews</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow js-shadow"></div>
-                            </a>
-
-                            <a href="tour-page-right-sidebar.html" class="tour_item" style="background-image: url(img/demo-bg.jpg)">
-                                <div class="tour_item_top">
-                                    <p class="country">
-                                        <span>The biggest part of the world</span>
-                                    </p>
-                                    <div class="add_bookmark fav-button added">
-                                        <i class="is-added bouncy"></i>
-                                        <i class="not-added bouncy"></i>
-                                        <span class="fav-overlay"></span>
-                                    </div>
-                                </div>
-                                <div class="tour_item_bottom">
-                                    <h3 class="_title">Asia</h3>
-                                    <div class="_info">
-                                        <div class="_info_left">
-                                            <div class="days">5 days |</div>
-                                            <div class="cost">from $256</div>
-                                        </div>
-                                        <div class="_info_right">
-                                            <div class="rating-stars">
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star"></div>
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="rating-text">5 reviews</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow js-shadow"></div>
-                            </a>
-
-                            <a href="tour-page-right-sidebar.html" class="tour_item" style="background-image: url(img/demo-bg.jpg)">
-                                <div class="tour_item_top">
-                                    <p class="country">
-                                        <span>Iceland</span>
-                                    </p>
-                                    <div class="add_bookmark fav-button added">
-                                        <i class="is-added bouncy"></i>
-                                        <i class="not-added bouncy"></i>
-                                        <span class="fav-overlay"></span>
-                                    </div>
-                                </div>
-                                <div class="tour_item_bottom">
-                                    <h3 class="_title">Reykjavik</h3>
-                                    <div class="_info">
-                                        <div class="_info_left">
-                                            <div class="days">5 days |</div>
-                                            <div class="cost">from $356</div>
-                                        </div>
-                                        <div class="_info_right">
-                                            <div class="rating-stars">
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star"></div>
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="rating-text">10 reviews</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow js-shadow"></div>
-                            </a>
-
-                            <a href="tour-page-right-sidebar.html" class="tour_item" style="background-image: url(img/demo-bg.jpg)">
-                                <div class="tour_item_top">
-                                    <p class="country">
-                                        <span>Japan</span>
-                                    </p>
-                                    <div class="add_bookmark fav-button added">
-                                        <i class="is-added bouncy"></i>
-                                        <i class="not-added bouncy"></i>
-                                        <span class="fav-overlay"></span>
-                                    </div>
-                                </div>
-                                <div class="tour_item_bottom">
-                                    <h3 class="_title">Unforgettable trip to Japan</h3>
-                                    <div class="_info">
-                                        <div class="_info_left">
-                                            <div class="days">5 days |</div>
-                                            <div class="cost">from $900</div>
-                                        </div>
-                                        <div class="_info_right">
-                                            <div class="rating-stars">
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star"></div>
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="rating-text">5 reviews</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow js-shadow"></div>
-                            </a>
-
-                            <a href="tour-page-right-sidebar.html" class="tour_item" style="background-image: url(img/demo-bg.jpg)">
-                                <div class="tour_item_top">
-                                    <p class="country">
-                                        <span>Australia</span>
-                                    </p>
-                                    <div class="add_bookmark fav-button added">
-                                        <i class="is-added bouncy"></i>
-                                        <i class="not-added bouncy"></i>
-                                        <span class="fav-overlay"></span>
-                                    </div>
-                                </div>
-                                <div class="tour_item_bottom">
-                                    <h3 class="_title">Sydney the opera house</h3>
-                                    <div class="_info">
-                                        <div class="_info_left">
-                                            <div class="days">5 days |</div>
-                                            <div class="cost">from $400</div>
-                                        </div>
-                                        <div class="_info_right">
-                                            <div class="rating-stars">
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star"></div>
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="rating-text">5 reviews</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow js-shadow"></div>
-                            </a>
-
-                            <a href="tour-page-right-sidebar.html" class="tour_item" style="background-image: url(img/demo-bg.jpg)">
-                                <div class="tour_item_top">
-                                    <p class="country">
-                                        <span>United States of America</span>
-                                    </p>
-                                    <div class="add_bookmark fav-button added">
-                                        <i class="is-added bouncy"></i>
-                                        <i class="not-added bouncy"></i>
-                                        <span class="fav-overlay"></span>
-                                    </div>
-                                </div>
-                                <div class="tour_item_bottom">
-                                    <h3 class="_title">Epcot Center Drive, Orlando</h3>
-                                    <div class="_info">
-                                        <div class="_info_left">
-                                            <div class="days">5 days |</div>
-                                            <div class="cost">from $400</div>
-                                        </div>
-                                        <div class="_info_right">
-                                            <div class="rating-stars">
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star"></div>
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="rating-text">5 reviews</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow js-shadow"></div>
-                            </a>
-
-                            <a href="tour-page-right-sidebar.html" class="tour_item" style="background-image: url(img/demo-bg.jpg)">
-                                <div class="tour_item_top">
-                                    <p class="country">
-                                        <span>United States of America</span>
-                                    </p>
-                                    <div class="add_bookmark fav-button added">
-                                        <i class="is-added bouncy"></i>
-                                        <i class="not-added bouncy"></i>
-                                        <span class="fav-overlay"></span>
-                                    </div>
-                                </div>
-                                <div class="tour_item_bottom">
-                                    <h3 class="_title">Cloud gate, Chicago, Illinois</h3>
-                                    <div class="_info">
-                                        <div class="_info_left">
-                                            <div class="days">5 days |</div>
-                                            <div class="cost">from $240</div>
-                                        </div>
-                                        <div class="_info_right">
-                                            <div class="rating-stars">
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star filled"></div>
-                                                <div class="star"></div>
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="rating-text">5 reviews</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow js-shadow"></div>
-                            </a>
-
                         </div>
                         <div class="pagination">
                             <a class="arrow prev"></a>
@@ -492,47 +263,11 @@
         </div>
         <div class="instagram_posts">
             <div class="posts">
-                <a class="post">
+                <a class="post" th:each="elem : ${instagrams}">
                     <div class="sq_parent">
                         <div class="sq_wrap">
                             <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="post">
-                    <div class="sq_parent">
-                        <div class="sq_wrap">
-                            <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="post">
-                    <div class="sq_parent">
-                        <div class="sq_wrap">
-                            <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="post">
-                    <div class="sq_parent">
-                        <div class="sq_wrap">
-                            <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="post">
-                    <div class="sq_parent">
-                        <div class="sq_wrap">
-                            <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
+                                <img th:src="'/api/files/' + ${elem.photo}" alt="">
                             </div>
                         </div>
                     </div>
@@ -548,28 +283,17 @@
                                 <div class="_title m_title">Travel list</div>
                                 <ul>
                                     <li><a href="travel-list-full-width.html">Travel list Full With</a></li>
-                                    <li><a href="travel-list-right-sidebar.html">Travel list Right Sidebar</a></li>
-                                    <li><a href="travel-list-left-sidebar.html">Travel list Left Sidebar</a></li>
-                                    <li><a href="travel-list-image-header.html">Travel list Full With Image Header</a></li>
                                     <li><a href="search-results.html">Search Result</a></li>
                                     <li><a href="search-results-not-found.html">Search Nothing Found</a></li>
-                                    <li><a href="tour-page-right-sidebar.html">Tour page Right Sidebar</a></li>
-                                    <li><a href="tour-page-left-sidebar.html">Tour page Left Sidebar</a></li>
-                                    <li><a href="tour-page-right-sidebar-width-reply.html">Tour page with reply form</a></li>
+                                    <li><a href="tour-page-right-sidebar-width-reply.html">Tour page with reply form</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col">
                                 <div class="_title m_title">Page</div>
                                 <ul>
-                                    <li><a href="stories-full-width.html">Stories Full With</a></li>
-                                    <li><a href="story.html">Stories Single</a></li>
-                                    <li><a href="stories-right-sidebar.html">Stories Right Sidebar</a></li>
-                                    <li><a href="stories-left-sidebar.html">Stories Left Sidebar</a></li>
                                     <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="gallery-single.html">Gallery Single</a></li>
                                     <li><a href="404.html">404 page</a></li>
-                                    <li><a href="static-page-right-sidebar.html">Static Page Right Sidebar</a></li>
-                                    <li><a href="static-page-left-sidebar.html">Static Page Left Sidebar</a></li>
                                     <li><a href="about-us.html">About Us</a></li>
                                 </ul>
                             </div>
@@ -577,12 +301,8 @@
                                 <div class="_title m_title">Blog</div>
                                 <ul>
                                     <li><a href="blog-full-width.html">Blog Full With</a></li>
-                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
                                     <li><a href="blog-search-results.html">Search Result</a></li>
                                     <li><a href="blog-search-results-not-found.html">Search Nothing Found</a></li>
-                                    <li><a href="blog-single-right-sidebar.html">Blog Single Right Sidebar</a></li>
-                                    <li><a href="blog-single-left-sidebar.html">Blog Single Left Sidebar</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -590,23 +310,25 @@
                             <div class="_title">Contacts</div>
                             <div class="contacts_info">
                                 <div class="tel">
-                                    <a href="tel:+19092020119">+ 1909 202 0119</a>
+                                    <a href="tel:+3550695345892">+355 069 5345 892</a>
                                     <p>Round the clock support</p>
                                 </div>
                                 <div class="email">
-                                    <a href="mailto:info@hellodigi.ru">info@hellodigi.ru</a>
+                                    <a href="mailto:info@hellodigi.ru">gonlinesoftware@gmail.com</a>
                                     <p>For any questions</p>
                                 </div>
                                 <div class="address">
-                                    1355 Digistrict St, Suite 909 San, Francisco, CA 10001 <br> United States
+                                    Bulevardi Zogu 1 <br> Albania
                                 </div>
                             </div>
                             <div class="socials social-links">
-                                <a href="#" class="link facebook"><span></span></a>
-                                <a href="#" class="link instagram"><span></span></a>
-                                <a href="#" class="link pinterest"><span></span></a>
-                                <a href="#" class="link twitter"><span></span></a>
-                                <a href="#" class="link youtube"><span></span></a>
+                                <a href="https://www.facebook.com/Gonline-Pro-106121668187962"
+                                   class="link facebook"><span></span></a>
+                                <a href="https://www.instagram.com/gonline.al/" class="link instagram"><span></span></a>
+                                <a href="https://www.pinterest.com/" class="link pinterest"><span></span></a>
+                                <a href="https://twitter.com/?lang=en" class="link twitter"><span></span></a>
+                                <a href="https://studio.youtube.com/channel/UCWVHt0A_Io4PPRL38cYQzzA/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"
+                                   class="link youtube"><span></span></a>
                             </div>
                         </div>
                     </div>
@@ -615,7 +337,7 @@
                             <a href="#">Privacy Policy</a>
                         </div>
                         <div class="right">
-                            Copyright © 2019 by Digistrict
+                            Copyright © 2019 by GONLINE
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -7,14 +7,14 @@
     <title>Trip in</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#151515">
     <meta name="theme-color" content="#151515">
 </head>
@@ -34,7 +34,7 @@
                     <div class="left">
                         <div class="search_btn"></div>
                         <a href="/" class="logo">
-                            <img src="img/logo.svg" alt="">
+                            <img src="/img/logo.svg" alt="">
                         </a>
                     </div>
                     <div class="menu_wrap" id="menu_wrap">
@@ -145,7 +145,7 @@
             </div>
         </div>
         <div class="tour_page right-sidebar">
-            <div class="tour_page_head" style="background-image: url(img/demo-bg.jpg)">
+            <div class="tour_page_head" style="background-image: url(/img/demo-bg.jpg)">
                 <div class="breadcrumbs">
                     <div class="wrap">
                         <div class="wrap_float">
@@ -159,9 +159,9 @@
                     <div class="wrap">
                         <div class="wrap_float">
                             <div class="top-info">
-                                <p class="country">Northern pole</p>
-                                <h1 class="tour_title">
-                                    Tour to the Arctic is an exotic journey on the verge of extreme
+                                <p class="country" th:text="${tour.destination.name}"></p>
+                                <h1 class="tour_title" th:text="${tour.title}">
+
                                 </h1>
                                 <div class="controls">
                                     <div class="add_bookmark fav-button">
@@ -178,19 +178,7 @@
                             <div class="slider_wrap">
                                 <div class="slider lightgallery" id="tour-head-slider">
                                     <a href="img/demo-bg-3.jpg" class="slide">
-                                        <img src="img/demo-bg-3.jpg" alt="">
-                                    </a>
-                                    <a href="img/demo-bg-3.jpg" class="slide">
-                                        <img src="img/demo-bg-3.jpg" alt="">
-                                    </a>
-                                    <a href="img/demo-bg-3.jpg" class="slide">
-                                        <img src="img/demo-bg-3.jpg" alt="">
-                                    </a>
-                                    <a href="img/demo-bg-3.jpg" class="slide">
-                                        <img src="img/demo-bg-3.jpg" alt="">
-                                    </a>
-                                    <a href="img/demo-bg-3.jpg" class="slide">
-                                        <img src="img/demo-bg-3.jpg" alt="">
+                                        <img th:src="'/api/files/' + ${tour.photo}" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -248,19 +236,9 @@
                                 <div class="bottom-info-right">
                                     <div class="info">
                                         <div class="days">5 days |</div>
-                                        <div class="cost">from $356</div>
+                                        <div class="cost" th:text="'$' + ${tour.price}"></div>
                                     </div>
                                     <button class="btn button js-popup-open" data-href="#book-now">Book now</button>
-                                    <div class="rating">
-                                        <div class="rating-stars">
-                                            <div class="star filled"></div>
-                                            <div class="star filled"></div>
-                                            <div class="star filled"></div>
-                                            <div class="star"></div>
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="rating-text">10 reviews</div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -273,87 +251,9 @@
                         <div class="left_content">
                             <div class="overview js-section content-block" id="overview">
                                 <h2 class="title">Overview</h2>
-                                <p class="description">
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+                                <p class="description" th:text="${tour.description}">
                                 </p>
-                                <div class="programm" id="programm-days">
-                                    <div class="day_item">
-                                        <div class="day_item-head active">
-                                            <div class="preview">
-                                                <div class="image">
-                                                    <img src="img/demo-bg.jpg" alt="">
-                                                </div>
-                                                <div class="p">Day 1</div>
-                                            </div>
-                                            <div class="_title">Transfer to hotel</div>
-                                            <div class="element"></div>
-                                        </div>
-                                        <div class="day_item-body" style="display: block;">
-                                            <div class="text">
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
-                                            </div>
-                                            <div class="images">
-                                                <div class="scroll lightgallery">
-                                                    <a href="img/demo-bg.jpg" class="item">
-                                                        <div class="img">
-                                                            <img src="img/demo-bg.jpg" alt="">
-                                                        </div>
-                                                        <span>Signature under photo</span>
-                                                    </a>
-                                                    <a href="img/demo-bg.jpg" class="item">
-                                                        <div class="img">
-                                                            <img src="img/demo-bg.jpg" alt="">
-                                                        </div>
-                                                        <span>Signature under photo</span>
-                                                    </a>
-                                                    <a href="img/demo-bg.jpg" class="item">
-                                                        <div class="img">
-                                                            <img src="img/demo-bg.jpg" alt="">
-                                                        </div>
-                                                        <span>Signature under photo</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="day_item">
-                                        <div class="day_item-head">
-                                            <div class="preview">
-                                                <div class="image">
-                                                    <img src="img/demo-bg.jpg" alt="">
-                                                </div>
-                                                <div class="p">Day 2-4</div>
-                                            </div>
-                                            <div class="_title">Sightseeing tour</div>
-                                            <div class="element"></div>
-                                        </div>
-                                        <div class="day_item-body">
-                                            <div class="text">
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="day_item">
-                                        <div class="day_item-head">
-                                            <div class="preview">
-                                                <div class="image">
-                                                    <img src="img/demo-bg.jpg" alt="">
-                                                </div>
-                                                <div class="p">Day 5</div>
-                                            </div>
-                                            <div class="_title">Free time</div>
-                                            <div class="element"></div>
-                                        </div>
-                                        <div class="day_item-body">
-                                            <div class="text">
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
                             </div>
                             <div class="included js-section content-block" id="included">
                                 <h2 class="title">Included</h2>
@@ -376,299 +276,18 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="location js-section content-block" id="location">
-                                <h3 class="title">Location</h3>
-                                <div class="map">
-                                    <!--                            <iframe src=""></iframe>-->
-                                </div>
-                            </div>
-                            <div class="stories js-section content-block" id="stories">
-                                <div class="title_wrap">
-                                    <h2 class="title">Stories</h2>
-                                    <div class="link">
-                                        <a href="#">All Stories</a>
-                                    </div>
-                                </div>
-                                <div class="stries_slider">
-                                    <div class="scroll">
-                                        <a href="story.html" class="story_item" style="background-image: url(img/demo-bg.jpg)">
-                                            <div class="item_wrap">
-                                                <div class="_content">
-                                                    <div class="flag_wrap">
-                                                        <div class="flag">
-                                                            <img src="img/demo-bg.jpg" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <h3 class="country">Russia</h3>
-                                                    <p class="text">
-                                                        Amazing underwater world
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="shadow js-shadow"></div>
-                                        </a>
-
-                                        <a href="story.html" class="story_item" style="background-image: url(img/demo-bg.jpg)">
-                                            <div class="item_wrap">
-                                                <div class="_content">
-                                                    <div class="flag_wrap">
-                                                        <div class="flag">
-                                                            <img src="img/demo-bg.jpg" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <h3 class="country">Maldives</h3>
-                                                    <p class="text">
-                                                        Amazing underwater world
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="shadow js-shadow"></div>
-                                        </a>
-
-                                        <a href="story.html" class="story_item" style="background-image: url(img/demo-bg.jpg)">
-                                            <div class="item_wrap">
-                                                <div class="_content">
-                                                    <div class="flag_wrap">
-                                                        <div class="flag">
-                                                            <img src="img/demo-bg.jpg" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <h3 class="country">Australia</h3>
-                                                    <p class="text">
-                                                        Amazing underwater world
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="shadow js-shadow"></div>
-                                        </a>
-
-                                        <a href="story.html" class="story_item" style="background-image: url(img/demo-bg.jpg)">
-                                            <div class="item_wrap">
-                                                <div class="_content">
-                                                    <div class="flag_wrap">
-                                                        <div class="flag">
-                                                            <img src="img/demo-bg.jpg" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <h3 class="country">Madagascar</h3>
-                                                    <p class="text">
-                                                        Amazing underwater world
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="shadow js-shadow"></div>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="comments-block js-section" id="reviews">
-                                <div class="title_wrap">
-                                    <div class="val">5.0</div>
-                                    <h2 class="title">Reviews</h2>
-                                    <div class="counter">12</div>
-                                </div>
-                                <div class="comments">
-                                    <div class="comment_item">
-                                        <div class="comment_item_top">
-                                            <p>
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
-                                            </p>
-                                        </div>
-                                        <div class="comment_item_bottom">
-                                            <div class="rating">
-                                                <div class="rating-stars">
-                                                    <div class="star filled"></div>
-                                                    <div class="star filled"></div>
-                                                    <div class="star filled"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                                <button class="reply">Reply</button>
-                                            </div>
-                                            <div class="author">
-                                                <div class="userpic">
-                                                    <img src="img/demo-bg.jpg" alt="">
-                                                </div>
-                                                <div class="name">21.09.2019 by Maya Delia</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="comment_item answer_comment">
-                                        <div class="comment_item_top">
-                                            <p>
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
-                                            </p>
-                                        </div>
-                                        <div class="comment_item_bottom">
-                                            <button class="reply">Reply</button>
-                                            <div class="author">
-                                                <div class="name">21.09.2019 by Maya Delia</div>
-                                                <div class="userpic">
-                                                    <img src="img/demo-bg.jpg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="comment_item">
-                                        <div class="comment_item_top">
-                                            <p>
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
-                                            </p>
-                                            <div class="images lightgallery">
-                                                <a href="img/demo-bg.jpg" class="img">
-                                                    <img src="img/demo-bg.jpg" alt="">
-                                                </a>
-                                                <a href="img/demo-bg.jpg" class="img">
-                                                    <img src="img/demo-bg.jpg" alt="">
-                                                </a>
-                                                <a href="img/demo-bg.jpg" class="img">
-                                                    <img src="img/demo-bg.jpg" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="comment_item_bottom">
-                                            <div class="rating">
-                                                <div class="rating-stars">
-                                                    <div class="star filled"></div>
-                                                    <div class="star filled"></div>
-                                                    <div class="star filled"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                                <button class="reply">Reply</button>
-                                            </div>
-                                            <div class="author">
-                                                <div class="userpic">
-                                                    <img src="img/demo-bg.jpg" alt="">
-                                                </div>
-                                                <div class="name">21.09.2019 by Maya Delia</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="pagination">
-                                    <a class="arrow prev"></a>
-                                    <ul>
-                                        <li><a href="#" class="active">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                    </ul>
-                                    <a class="arrow next"></a>
-                                </div>
-                            </div>
-                            <div class="write_comment">
-                                <div class="top">
-                                    <h3 class="title">Write A Review</h3>
-                                    <div class="rating">
-                                        <div class="rating-text">Assigned Rating</div>
-                                        <div class="rating-stars stars user-rating">
-                                            <div class="star"></div>
-                                            <div class="star"></div>
-                                            <div class="star"></div>
-                                            <div class="star"></div>
-                                            <div class="star"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="center">
-                                    <input type="text" class="input" placeholder="Name">
-                                    <input type="text" class="input" placeholder="Email">
-                                    <textarea class="textarea" placeholder="Reviews"></textarea>
-                                </div>
-                                <div class="bottom">
-                                    <div class="files">
-                                        <label for="file-1" class="label"><span>Add a photo</span></label>
-                                        <input type="file" id="file-1">
-                                        <div class="file-name"><span>IMG_5050.JPG,</span> <span>IMG_5051.JPG</span></div>
-                                    </div>
-                                    <button class="submit button">Send</button>
-                                </div>
-                            </div>
                         </div>
                         <div class="right_content sidebar">
-                            <div class="navigation" id="sidebar-navigation">
-                                <ul>
-                                    <li><a class="active" href="#head">Photo / Video</a></li>
-                                    <li><a href="#overview">Overview</a></li>
-                                    <li><a href="#included">Included</a></li>
-                                    <li><a href="#location">Location</a></li>
-                                    <li><a href="#stories">Stories</a></li>
-                                    <li><a href="#reviews">Reviews</a></li>
-                                </ul>
-                            </div>
                             <a class="book-now button js-popup-open" data-href="#book-now">
                                 <span>Book now</span>
-                                <span class="cost">from $356</span>
+                                <span class="cost" th:text="'$' + ${tour.price}"></span>
                             </a>
-                            <div class="add-to-favorites">
-                                <div class="add_bookmark fav-button">
-                                    <i class="is-added bouncy"></i>
-                                    <i class="not-added bouncy"></i>
-                                    <span class="fav-overlay"></span>
-                                </div>
-                                <div class="fav-text">
-                                    Add to favourites
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="instagram_posts">
-            <div class="posts">
-                <a class="post">
-                    <div class="sq_parent">
-                        <div class="sq_wrap">
-                            <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="post">
-                    <div class="sq_parent">
-                        <div class="sq_wrap">
-                            <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="post">
-                    <div class="sq_parent">
-                        <div class="sq_wrap">
-                            <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="post">
-                    <div class="sq_parent">
-                        <div class="sq_wrap">
-                            <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="post">
-                    <div class="sq_parent">
-                        <div class="sq_wrap">
-                            <div class="sq_content">
-                                <img src="img/demo-bg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+
         <div class="footer">
             <div class="wrap">
                 <div class="wrap_float">
@@ -1015,7 +634,7 @@
                 <div class="popup-body">
                     <div class="tour-title">
                         <div class="img">
-                            <img src="img/demo-bg.jpg" alt="">
+                            <img src="/img/demo-bg.jpg" alt="">
                         </div>
                         <div class="tour-name">
                             Tour to the Arctic is an exotic journey on the verge of extreme
@@ -1072,13 +691,13 @@
         <div class="close"></div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/lightgallery.js"></script>
-    <script src="js/jquery.mousewheel.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/hammer.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/lightgallery.js"></script>
+    <script src="/js/jquery.mousewheel.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/hammer.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 
 </html>

@@ -1,30 +1,32 @@
 package com.travelagency.tirana.controller;
 
 import com.travelagency.tirana.service.Impl.InstagramImpl.InstagramService;
-import com.travelagency.tirana.service.Impl.ReservationImpl.ReservationService;
 import com.travelagency.tirana.service.Impl.TourImpl.TourService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-public class ContactsController {
+public class SearchResultController {
 
-    private InstagramService instagramService;
+    TourService tourService;
+    InstagramService instagramService;
 
-    public ContactsController(InstagramService instagramService) {
+    public SearchResultController(TourService tourService, InstagramService instagramService) {
+        this.tourService = tourService;
         this.instagramService = instagramService;
     }
 
-    @GetMapping("/contacts.html")
+
+    @GetMapping("/search-results.html")
     public String showHello(final ModelMap modelMap) {
+
+        var tours = this.tourService.getAll();
+        modelMap.addAttribute("tours", tours);
 
         var instagrams = this.instagramService.getAll();
         modelMap.addAttribute("instagrams", instagrams);
 
-        return "contacts";
+        return "search-results";
     }
 }
