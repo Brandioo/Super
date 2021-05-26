@@ -1169,8 +1169,21 @@ $(document).ready(function(){
     //Success form ========================/
     $(".js-submit").on("click", function(e){
         e.preventDefault();
-        $(".popup").removeClass("opened");
-        $("#contact-us-success").addClass("opened");
+
+        const $form = $(e.target).closest("form");
+        const jqxhr = $.post($form.attr("action"), $form.serialize())
+            .done(function() {
+                $(".popup").removeClass("opened");
+                $("#contact-us-success").addClass("opened");
+            })
+            .fail(function() {
+                alert( "error" );
+            })
+            .always(function() {
+
+            });
+
+
     });
     //Success form ========================/
     

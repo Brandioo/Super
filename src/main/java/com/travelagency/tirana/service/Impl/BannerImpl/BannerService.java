@@ -10,5 +10,5 @@ public interface BannerService {
     long save(SaveBannerRequest request);
     List<Banner> getAll();
     Optional<Banner> getById(long id);
-    void delete(long clientId);
+    void delete(long userId);
 }

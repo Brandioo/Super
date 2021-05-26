@@ -46,9 +46,6 @@
                                     <li class="dropdown_li">
                                         <a href="#" class="active"><span>Travel list</span></a>
                                         <ul class="dropdown_ul">
-                                            <li><a href="travel-list-full-width.html">Travel list Full With</a></li>
-                                            <li><a href="travel-list-right-sidebar.html">Travel list Right Sidebar</a>
-                                            </li>
                                             <li><a href="search-results.html">Search Result</a></li>
                                             <li><a href="search-results-not-found.html">Search Nothing Found</a></li>
                                             <li><a href="tour-page-right-sidebar-width-reply.html">Tour page with reply
@@ -66,7 +63,6 @@
                                     <li class="dropdown_li">
                                         <a href="#"><span>Blog</span></a>
                                         <ul class="dropdown_ul">
-                                            <li><a href="blog-full-width.html">Blog Full With</a></li>
                                             <li><a href="blog-search-results.html">Search Result</a></li>
                                             <li><a href="blog-search-results-not-found.html">Search Nothing Found</a>
                                             </li>
@@ -179,7 +175,7 @@
             <div class="wrap">
                 <div class="wrap_float">
                     <div class="left_content">
-                        <div class="posts" th:each="elem : ${banners}">
+                        <div class="posts" th:each="elem : ${tours}">
                             <a href="tour-page-right-sidebar.html" class="tour_item"
                                th:style="'background-image:url(/api/files/' + ${elem.photo} + ');'">
                                 <div class="tour_item_top">
@@ -231,52 +227,6 @@
                                             <option value="Asia">Asia</option>
                                             <option value="Voronezh">Voronezh</option>
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="date-col">
-                                    <div class="label">Check In</div>
-                                    <div class="date_div">
-                                        <input type="text" class="js_calendar desctop-input hasDatepicker"
-                                               id="dp1621601390889">
-                                        <input type="date" class="mobile-input">
-                                        <div class="day">21</div>
-                                        <div class="date_div_right">
-                                            <div class="month">May</div>
-                                            <div class="year">2021</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="date-col">
-                                    <div class="label">Check Out</div>
-                                    <div class="date_div">
-                                        <input type="text" class="js_calendar desctop-input hasDatepicker"
-                                               id="dp1621601390890">
-                                        <input type="date" class="mobile-input">
-                                        <div class="day">21</div>
-                                        <div class="date_div_right">
-                                            <div class="month">May</div>
-                                            <div class="year">2021</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="num-col">
-                                    <div class="label">Adult</div>
-                                    <div class="num_wrap">
-                                        <div class="buttons">
-                                            <button class="plus"></button>
-                                            <button class="minus"></button>
-                                        </div>
-                                        <input type="number" class="val js_num" value="3" min="0" max="99">
-                                    </div>
-                                </div>
-                                <div class="num-col last">
-                                    <div class="label">Children</div>
-                                    <div class="num_wrap">
-                                        <div class="buttons">
-                                            <button class="plus"></button>
-                                            <button class="minus"></button>
-                                        </div>
-                                        <input type="number" class="val js_num" value="3" min="0" max="99">
                                     </div>
                                 </div>
                                 <button class="btn"><span>Search</span></button>
@@ -422,7 +372,6 @@
                         <div class="col">
                             <div class="_title m_title">Travel list</div>
                             <ul>
-                                <li><a href="travel-list-full-width.html">Travel list Full With</a></li>
                                 <li><a href="search-results.html">Search Result</a></li>
                                 <li><a href="search-results-not-found.html">Search Nothing Found</a></li>
                                 <li><a href="tour-page-right-sidebar-width-reply.html">Tour page with reply form</a>
@@ -440,7 +389,6 @@
                         <div class="col">
                             <div class="_title m_title">Blog</div>
                             <ul>
-                                <li><a href="blog-full-width.html">Blog Full With</a></li>
                                 <li><a href="blog-search-results.html">Search Result</a></li>
                                 <li><a href="blog-search-results-not-found.html">Search Nothing Found</a></li>
                             </ul>
@@ -637,7 +585,7 @@
                 <div class="form">
                     <input type="text" class="input" placeholder="Username">
                     <input type="text" class="input" placeholder="Name">
-                    <input type="text" class="input" placeholder="Surename">
+                    <input type="text" class="input" placeholder="Surname">
                     <input type="email" class="input" placeholder="Email">
                     <input type="password" class="input" placeholder="Password">
                     <input type="password" class="input" placeholder="Password Repeat">
@@ -693,18 +641,22 @@
             </div>
             <div class="popup-body">
                 <div class="form">
-                    <input type="text" class="input" placeholder="Username" value="Victor777">
-                    <input type="text" class="input" placeholder="Name" value="Victor">
-                    <input type="text" class="input" placeholder="Surename" value="Shibut">
-                    <input type="email" class="input" placeholder="Email" value="test@test.com">
-                    <div class="label">Change password</div>
-                    <input type="password" class="input" placeholder="Current password">
-                    <input type="password" class="input" placeholder="Enter new password">
-                    <input type="password" class="input" placeholder="New password repeat">
-                    <div class="label">Authorization through social networks</div>
+                    <input class="input" placeholder="Username" type="text" value="Brand">
+                    <input class="input" placeholder="Name" type="text" value="Brand">
+                    <input class="input" placeholder="Surename" type="text" value="Citozi">
+                    <input class="input" placeholder="Email" type="email" value="test@test.com">
+                    <div class="label">
+                        Change password
+                    </div>
+                    <input class="input" placeholder="Current password" type="password">
+                    <input class="input" placeholder="Enter new password" type="password">
+                    <input class="input" placeholder="New password repeat" type="password">
+                    <div class="label">
+                        Authorization through social networks
+                    </div>
                     <div class="social-links">
-                        <a href="#" class="link facebook active"><span></span></a>
-                        <a href="#" class="link twitter"><span></span></a>
+                        <a class="link facebook active" href="#"><span></span></a> <a class="link twitter"
+                                                                                      href="#"><span></span></a>
                     </div>
                     <button class="submit button js-submit">Save Setting</button>
                 </div>
