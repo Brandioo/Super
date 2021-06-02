@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 
         var newUser = new User();
         newUser.setEmail(request.getEmail());
-        newUser.setPassword(request.getPassword());
+        newUser.setPassword(bCryptPasswordEncoder.encode(request.getPassword()));
         userRepository.save(newUser);
         return newUser.getId();
     }

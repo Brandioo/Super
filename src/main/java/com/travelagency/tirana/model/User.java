@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
@@ -17,8 +18,5 @@ public class User {
     private String email;
     private String password;
 
-    public User(String email, String password) {
-        this.email = email;
-        this.password = password;
-    }
+
 }
