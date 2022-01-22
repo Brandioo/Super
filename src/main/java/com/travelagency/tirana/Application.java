@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.servlet.MultipartConfigElement;
 
-
+//@ComponentScan("com.travelagency.tirana.repository")
 @SpringBootApplication
 public class Application {
 

@@ -219,13 +219,13 @@
                         This is the most popular destination in the last month
                     </p>
                     <div class="controls">
-                        <a href="travel-list-image-header.html" class="link">View All Destinations</a>
+                        <a href="favourites.html" class="link">View All Destinations</a>
                     </div>
                 </div>
                 <div class="section_content">
                     <div class="scroll">
                         <a th:each="elem : ${destinations}"
-                           th:href="'/details/' + ${elem.id}" class="destinations_item"
+                           href="favourites.html" class="destinations_item"
                            th:style="'background-image:url(/api/files/' + ${elem.photo} + ');'">
                             <div class="sq_parent">
                                 <div class="sq_wrap">
@@ -641,7 +641,7 @@
             </div>
             <div class="popup-body">
                 <div class="subtitle">
-                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                    GONLINE MAKES IT BETTER
                 </div>
                 <div class="form">
                     <input type="text" class="input" placeholder="Name">
