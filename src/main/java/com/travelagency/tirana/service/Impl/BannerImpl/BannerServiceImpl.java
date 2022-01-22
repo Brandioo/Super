@@ -3,6 +3,7 @@ package com.travelagency.tirana.service.Impl.BannerImpl;
 import com.travelagency.tirana.model.Banner;
 import com.travelagency.tirana.model.Destination;
 import com.travelagency.tirana.repository.BannerRepository;
+import lombok.var;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

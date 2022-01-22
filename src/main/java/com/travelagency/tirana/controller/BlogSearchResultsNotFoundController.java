@@ -1,6 +1,7 @@
 package com.travelagency.tirana.controller;
 
 import com.travelagency.tirana.service.Impl.InstagramImpl.InstagramService;
+import lombok.var;
 import org.hibernate.validator.constraints.CodePointLength;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

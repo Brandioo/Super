@@ -4,6 +4,7 @@ import com.travelagency.tirana.model.Client;
 import com.travelagency.tirana.model.Reservation;
 import com.travelagency.tirana.repository.ClientRepository;
 import com.travelagency.tirana.repository.ReservationRepository;
+import lombok.var;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

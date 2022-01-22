@@ -5,6 +5,7 @@ import com.travelagency.tirana.model.Destination;
 import com.travelagency.tirana.repository.BlogRepository;
 import com.travelagency.tirana.service.Impl.BlogImpl.SaveBlogRequest;
 import com.travelagency.tirana.service.Impl.BlogImpl.BlogService;
+import lombok.var;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

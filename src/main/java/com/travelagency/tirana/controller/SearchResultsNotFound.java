@@ -1,6 +1,7 @@
 package com.travelagency.tirana.controller;
 
 import com.travelagency.tirana.service.Impl.InstagramImpl.InstagramService;
+import lombok.var;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;

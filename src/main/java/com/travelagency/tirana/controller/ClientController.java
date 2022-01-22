@@ -3,6 +3,7 @@ package com.travelagency.tirana.controller;
 import com.travelagency.tirana.model.Client;
 import com.travelagency.tirana.service.Impl.ClientImpl.ClientService;
 import com.travelagency.tirana.service.Impl.ClientImpl.SaveClientRequest;
+import lombok.var;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

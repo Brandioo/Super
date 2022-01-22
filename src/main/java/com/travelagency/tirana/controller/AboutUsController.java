@@ -4,6 +4,7 @@ import com.travelagency.tirana.service.Impl.InstagramImpl.InstagramService;
 import com.travelagency.tirana.service.Impl.ReservationImpl.ReservationService;
 import com.travelagency.tirana.service.Impl.TeamMemberImpl.TeamMemberService;
 import com.travelagency.tirana.service.Impl.TourImpl.TourService;
+import lombok.var;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;

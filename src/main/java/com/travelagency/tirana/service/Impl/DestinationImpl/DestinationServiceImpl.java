@@ -2,6 +2,7 @@ package com.travelagency.tirana.service.Impl.DestinationImpl;
 
 import com.travelagency.tirana.model.Destination;
 import com.travelagency.tirana.repository.DestinationRepository;
+import lombok.var;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

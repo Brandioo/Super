@@ -2,6 +2,7 @@ package com.travelagency.tirana.service.Impl.InstagramImpl;
 
 import com.travelagency.tirana.model.Instagram;
 import com.travelagency.tirana.repository.InstagramRepository;
+import lombok.var;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

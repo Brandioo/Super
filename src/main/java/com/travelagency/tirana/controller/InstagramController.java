@@ -3,6 +3,7 @@ package com.travelagency.tirana.controller;
 import com.travelagency.tirana.model.Instagram;
 import com.travelagency.tirana.service.Impl.InstagramImpl.InstagramService;
 import com.travelagency.tirana.service.Impl.InstagramImpl.SaveInstagramRequest;
+import lombok.var;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

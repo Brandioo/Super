@@ -5,6 +5,7 @@ import com.travelagency.tirana.model.Destination;
 
 import com.travelagency.tirana.service.Impl.DestinationImpl.DestinationService;
 import com.travelagency.tirana.service.Impl.DestinationImpl.SaveDestinationRequest;
+import lombok.var;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -3,6 +3,7 @@ package com.travelagency.tirana.controller;
 import com.travelagency.tirana.model.Banner;
 import com.travelagency.tirana.service.Impl.BannerImpl.BannerService;
 import com.travelagency.tirana.service.Impl.BannerImpl.SaveBannerRequest;
+import lombok.var;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
